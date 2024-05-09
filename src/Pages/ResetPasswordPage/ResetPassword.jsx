@@ -13,38 +13,41 @@ const ResetPassword = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // const resetPasswordForm = async () => {
-  //   console.log("User logged in", formData);
+  const resetPasswordForm = async (postId) => {
+    console.log("User logged in", formData);
 
-  //   let responseData;
-  //   // console.log(process.env.REACT_APP_BASE_URL);
-  //   await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/reset-password/:id`, {
-  //     method: "POST",
-  //     headers: {
-  //       Accept: "application/json",
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(formData),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       responseData = data;
-  //       console.log(data);
-  //     })
-  //     .catch((error) => console.error("Error in logged in", error));
+    let responseData;
+    // console.log(process.env.REACT_APP_BASE_URL);
+    await fetch(
+      `${process.env.REACT_APP_BASE_URL}/api/v1/reset-password/${postId}`,
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        responseData = data;
+        console.log(data);
+      })
+      .catch((error) => console.error("Error in logged in", error));
 
-  //   if (responseData.message) {
-  //     alert(responseData.message);
-  //     // window.location.replace("/login");
-  //   } else {
-  //     alert(responseData.message);
-  //   }
-  // };
+    if (responseData.message) {
+      alert(responseData.message);
+      // window.location.replace("/login");
+    } else {
+      alert(responseData.message);
+    }
+  };
 
   return (
     <div className={`popup signup-popup show d-lg-flex`}>
       <div className="modal-content">
-      <div className="modal-header custom-modal-header d-flex justify-content-center mb-4 ">
+        <div className="modal-header custom-modal-header d-flex justify-content-center mb-4 ">
           Reset Password
         </div>
         <div className="p-4">
