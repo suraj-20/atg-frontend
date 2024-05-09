@@ -87,23 +87,6 @@ const AddPost = () => {
         />
       </div>
 
-      <div className="addproduct-itemfield">
-        <p>Post Image:</p>
-        <label htmlFor="file-input">
-          <img
-            src={image ? URL.createObjectURL(image) : upload_area}
-            alt=""
-            className="addproduct-thumbnail-img"
-          />
-        </label>
-        <input
-          onChange={imageHandler}
-          type="file"
-          name="image"
-          id="file-input"
-          hidden
-        />
-      </div>
       <button
         onClick={(e) => {
           e.preventDefault();
