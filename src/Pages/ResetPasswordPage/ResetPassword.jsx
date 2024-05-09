@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ResetPassword = () => {
-    const [state, setState] = useState("");
+  // const [state, setState] = useState("");
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -78,7 +78,7 @@ const ResetPassword = () => {
 
                     <Link
                       to={"/login"}
-                        onClick={() => setState("forgotPassword")}
+                      // onClick={() => setState("forgotPassword")}
                       className="btn d-lg-block text-center forgot"
                     >
                       Login

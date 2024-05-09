@@ -1,19 +1,13 @@
 import React, { useState } from "react";
 import "./AddProduct.css";
-import upload_area from "../../Assets/upload_area.svg";
 
 const AddPost = () => {
-  const [image, setImage] = useState(false);
   const [postDetails, setPostDetails] = useState({
     title: "",
     image: "",
     content: "",
     description: "",
   });
-
-  const imageHandler = (e) => {
-    setImage(e.target.files[0]);
-  };
 
   const changeHandler = (e) => {
     setPostDetails({ ...postDetails, [e.target.name]: e.target.value });
