@@ -1,0 +1,17 @@
+.left-arrow-btn {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.join-group {
+  border: 0.99px solid #fff;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.join-group:hover {
+  color: #fff;
+}

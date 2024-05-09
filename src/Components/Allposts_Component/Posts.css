@@ -1,0 +1,55 @@
+.card-container {
+  /* max-width: 692px; */
+  border-color: rgb(224, 224, 224);
+  fill: rgb(255, 255, 255);
+}
+
+.imagePost {
+  height: 220px;
+  border-radius: 4px 4px 0 0;
+  background-color: #c4c4c4;
+}
+
+.input-text {
+  outline: none;
+  border: none;
+}
+
+.posts-center {
+  /* flex: 1 0 auto; */
+  width: 100%;
+}
+
+.fa-square-share-nodes {
+  font-size: 1.8rem;
+}
+
+.custom-post-link {
+  width: 100%;
+  border: 1px solid gray;
+}
+
+.location-info {
+  color: #000;
+  opacity: 0.5;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.text-recommended {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.follow {
+  background: #edeef0;
+}
+
+@media screen and (max-width:992px) {
+  .posts-center {
+    flex: 1 auto;
+  }
+}
